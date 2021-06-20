@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awesome Quiz App</title>
+    <link rel="stylesheet" href="../CSS/21th project.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+
+<body>
+    <div class="start_btn"><button>Start Quiz</button></div>
+
+    <!-- Info Box -->
+    <div class="info_box">
+        <div class="info-title"><span>Some Rules of this Quiz</span></div>
+        <div class="info-list">
+            <div class="info">1. You will have only <span>15 seconds</span> per each question.</div>
+            <div class="info">2. Once you select your answer, it can't be undone.</div>
+            <div class="info">3. You can't select any option once time goes off.</div>
+            <div class="info">4. You can't exit from the Quiz while you're playing.</div>
+            <div class="info">5. You'll get points on the basis of your correct answers.</div>
+        </div>
+        <div class="buttons">
+            <button class="quit">Exit Quiz</button>
+            <button class="restart">Continue</button>
+        </div>
+    </div>
+
+    <!-- Quiz Box -->
+    <div class="quiz_box">
+        <header>
+            <div class="title">Awesome Quiz Application</div>
+            <div class="timer">
+                <div class="time_left_txt">Time Left</div>
+                <div class="timer_sec">15</div>
+            </div>
+            <div class="time_line"></div>
+        </header>
+        <section>
+            <div class="que_text">
+                <!-- Here I've inserted question from JavaScript -->
+            </div>
+            <div class="option_list">
+                <!-- Here I've inserted options from JavaScript -->
+            </div>
+        </section>
+
+        <!-- footer of Quiz Box -->
+        <footer>
+            <div class="total_que">
+                <!-- Here I've inserted Question Count Number from JavaScript -->
+            </div>
+            <button class="next_btn">Next Question</button>
+        </footer>
+    </div>
+
+    <!-- Result Box -->
+    <div class="result_box">
+        <div class="icon">
+            <i class="fas fa-crown"></i>
+        </div>
+        <div class="complete_text">You've completed the Quiz!</div>
+        <div class="score_text">
+            <!-- Here I've inserted Score Result from JavaScript -->
+        </div>
+        <div class="buttons">
+            <button class="restart">Replay Quiz</button>
+            <button class="quit">Quit Quiz</button>
+        </div>
+    </div>
+
+    <!-- Inside this JavaScript file I've inserted Questions and Options only -->
+    <script>
+        // creating an array and passing the number, questions, options, and answers
+        let questions = [
+            {
+                numb: 1,
+                question: "What does HTML stand for?",
+                answer: "Hyper Text Markup Language",
+                options: [
+                    "Hyper Text Preprocessor",
+                    "Hyper Text Markup Language",
+                    "Hyper Text Multiple Language",
+                    "Hyper Tool Multi Language"
+                ]
+            },
+            {
+                numb: 2,
+                question: "What does CSS stand for?",
+                answer: "Cascading Style Sheet",
+                options: [
+                    "Common Style Sheet",
+                    "Colorful Style Sheet",
+                    "Computer Style Sheet",
+                    "Cascading Style Sheet"
+                ]
+            },
+            {
+                numb: 3,
+                question: "What does PHP stand for?",
+                answer: "Hypertext Preprocessor",
+                options: [
+                    "Hypertext Preprocessor",
+                    "Hypertext Programming",
+                    "Hypertext Preprogramming",
+                    "Hometext Preprocessor"
+                ]
+            },
+            {
+                numb: 4,
+                question: "What does SQL stand for?",
+                answer: "Structured Query Language",
+                options: [
+                    "Stylish Question Language",
+                    "Stylesheet Query Language",
+                    "Statement Question Language",
+                    "Structured Query Language"
+                ]
+            },
+            {
+                numb: 5,
+                question: "What does XML stand for?",
+                answer: "eXtensible Markup Language",
+                options: [
+                    "eXtensible Markup Language",
+                    "eXecutable Multiple Language",
+                    "eXTra Multi-Program Language",
+                    "eXamine Multiple Language"
+                ]
+            },
+            {
+                numb: 6,
+                question: "What does JS stand for ?",
+                answer: "JavaScript",
+                options: [
+                    "JavaScript",
+                    "JammyScript",
+                    "TypeScript",
+                    "React JavaScript"
+                ]
+            },
+            {
+                numb: 7,
+                question: " Alzheimer's disease mainly affects which part of the human body ?",
+                answer: "Brain",
+                options: [
+                    "Eyes",
+                    "Ears",
+                    "Brain",
+                    "Stomach"
+                ]
+            },
+            {
+                numb: 8,
+                question: "Who is the heroine in this song ?",
+                answer: "Raveena Tandon",
+                options: [
+                    "Madhuri Dixit",
+                    "Karisma Kapoor",
+                    "Juhi Chawla",
+                    "Raveena Tandon"
+                ]
+            },
+            {
+                numb: 9,
+                question: "Aurangzeb Road, in the heart of New Delhi, was re-named after which personally ?",
+                answer: "A.P.J Abdul Kalam",
+                options: [
+                    "Guru Tegh Bahadur",
+                    "Dara Shikoh",
+                    "A.P.J Abdul Kalam",
+                    "Kanshi Ram"
+                ]
+            },
+            {
+                numb: 10,
+                question: "Which of these real-life incidents of the 90s forms a backdrop of the film 'Jagga Jasoos' ?",
+                answer: "Purulia Arms Drop Case",
+                options: [
+                    "Ganesh Idols Drinking Milk",
+                    "Mombay Blasts",
+                    "Jessica Lall Murder",
+                    "Purulia Arms Drop Case"
+                ]
+            },
+            {
+                numb: 11,
+                question: "Which of these personalities is not an alumnus of an Indian Institute of Technology?",
+                answer: "Satya Nadella",
+                options: [
+                    "Arvind Kejriwal",
+                    "Dara Shikoh",
+                    "Sundar Pichai",
+                    "Satya Nadella"
+                ]
+            },
+            {
+                numb: 12,
+                question: "Who among the following has held the office of Vice-President of India for two consecutive terms?",
+                answer: "Mohammad Hamid Ansari",
+                options: [
+                    "Krishan Kant",
+                    "Shankar Dayal Sharma",
+                    "Bhairon Singh Shekhawat",
+                    "Mohammad Hamid Ansari"
+                ]
+            },
+            {
+                numb: 13,
+                question: "In which of these sports have women and men both won Olympic medals for India?",
+                answer: "Boxing",
+                options: [
+                    "Weightlifting",
+                    "Boxing",
+                    "Badminton",
+                    "Shooting"
+                ]
+            },
+            {
+                numb: 14,
+                question: " Which Indian state shares its borders with the most number of states or Union Territories?",
+                answer: "Uttar Pradesh",
+                options: [
+                    "Maharashtra",
+                    "Rajasthan",
+                    "Uttar Pradesh",
+                    "Andhra Pradesh"
+                ]
+            },
+            {
+                numb: 15,
+                question: " The Ashoka Pillar, Saraswati Koop and Jodhabai Palace can all be found at which of these places?",
+                answer: "Allahabad Fort",
+                options: [
+                    "Fatehpur Sikri",
+                    "Allahabad Fort",
+                    "Amer Fort",
+                    "Kandahar"
+                ]
+            },
+        ];
+    </script>
+
+    <script src="../JS/21th project.js"></script>
+
+</body>
+
+</html>
+
+</html>
