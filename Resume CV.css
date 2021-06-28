@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background: #69bfdb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.container{
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 900px;
+    background: #fff;
+    margin: 50px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    box-shadow: 0 35px 55px rgba(0, 0, 0, 0.1);
+}
+.container .left_side{
+    position: relative;
+    background: #003147;
+    padding: 40px;
+}
+.profileText{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.profileText .imgBx{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.profileText .imgBx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.profileText h2{
+    color: #fff;
+    font-size: 1.8em;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+    line-height: 1.4em;
+}
+.profileText h2 span{
+    font-size: 0.7em;
+    font-weight: 100;
+}
+.contactInfo{
+    padding-top: 40px;
+}
+.title{
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 25px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+.contactInfo ul{
+    position: relative;
+}
+.contactInfo ul li{
+    position: relative;
+    list-style: none;
+    margin: 10px 0;
+    cursor: pointer;
+}
+.contactInfo ul li .icon{
+    display: inline-block;
+    width: 30px;
+    font-size: 23px;
+    color: rgb(0, 153, 255);
+}
+.contactInfo ul li span{
+    color: #fff;
+    font-weight: 500;
+    font-size: 16px;
+}
+.hobbies-list{
+    border: 3px solid #fff;
+    display: flex;
+    justify-content: center;
+    width: 80%;
+}
+.hobbies-list .icon{
+    font-size: 2em;
+    margin: 3px 17px;
+    text-align: center;
+    color: #fff;
+}
+.hobbies-list h2{
+    color: #fff;
+}
+.contactInfo.Language .percent {
+    position: relative;
+    width: 100%;
+    height: 8px;
+    background: #081220;
+    border-radius: 5px;
+    display: block;
+    margin-top: 5px;
+}
+.contactInfo.Language .percent div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #03a9f4;
+    border-radius: 5px;
+}
+.container .right_side{
+    position: relative;
+    background: #fff;
+    padding: 40px;
+}
+.about{
+    margin-bottom: 50px;
+}
+.about:last-child{
+    margin-bottom: 0;
+}
+.title2{
+    color: #003147;
+    font-size: 29px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+p{
+    color: #333;
+}
+.skills .box{
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.skills .box h4{
+    text-transform: uppercase;
+    color: #5a6474;
+    font-size: 20px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+.skills .box .percent{
+    position: relative;
+    width: 100%;
+    height: 10px;
+    background: #f0f0f0;
+    border-radius: 5px;
+}
+.skills .box .percent div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #03a9f4;
+    border-radius:5px;
+}
+.interest ul{
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+}
+.interest ul li{
+    list-style: none;
+    color: #333;
+    font-weight: 800;
+    margin: 37px 0px;
+}
+.interest ul li .fas{
+    color: #03a9f4;
+    font-size: 45px;
+    width: 20px;
+}
+.interest ul li h6{
+    font-size: 24px;
+}
